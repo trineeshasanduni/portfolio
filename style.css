@@ -26,6 +26,7 @@ body{
 
 }
 
+
 .logo{
     position:relative;
     font-size:25px;
@@ -37,18 +38,174 @@ body{
     animation: slideRight 1s ease forwards;
 
 }
-.navbar a {
-    display: inline-block;
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+.navbar .links a {
+    /* display: inline-block;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 35px; */
+    display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
     transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards ;
     animation-delay: calc(.2s * var(--i));
 }
+#nav-toggle {
+	/* position: absolute;
+	top: -100px; */
+    display: none;
+}
+
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+/* Corrected CSS code */
+@media screen and (max-width: 768px) {
+    nav .links {
+        position: fixed;
+        z-index: 9;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, .8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .links a {
+        font-size: 20px;
+    }
+
+    nav input[type="checkbox"]:checked ~ .links {
+        bottom: 0;
+    }
+
+    nav .icon-burger {
+        display: block;
+    }
+
+    nav input[type="checkbox"]:checked ~ .icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    nav input[type="checkbox"]:checked ~ .icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    nav input[type="checkbox"]:checked ~ .icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+    .home{
+        padding: 0;
+        height: 100%;
+    }
+    .home-main{
+        flex-direction: column-reverse;
+        /* margin: 0px; */
+       
+        margin: 0;
+    }
+    .home-main .home-content{
+        margin-top: 0;
+        text-align: center;
+        justify-content: center;
+        /* padding-left: 15vw; */
+        width: 100%;
+        
+    }
+    .home-main .home-content h1 h3 p{
+        text-align: center;
+    }
+
+    .home-main .home-content p{
+        flex-direction: row;
+    }
+    .about-main{
+        padding-top: 40vh;
+        flex-direction: column;
+        margin: 5vh;
+        
+    }
+    .about-main .about-text{
+        text-align: center;
+        width: 100%;
+        margin-top: 0;
+       
+       
+    }
+    .home-content-1{
+        justify-content: center;
+        margin: 5vh;
+    }
+    .home-content-1 .btn{
+       align-items: center;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact-main{
+        flex-direction: column;
+        padding-left: 0;
+        
+    }
+    .contact-form{
+        width:fit-content;
+
+    }
+    .contact-text{
+        width:max-content;
+        left: 10vh;
+        padding-left: 0;
+    }
+    .contact-main{
+       text-align: center;
+       padding-left: 0vh;
+       /* width: 100%; */
+    }
+    
+   
+
+}
+
 
 .navbar a:hover{
     color: #0ef;
@@ -58,16 +215,25 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(background.png) no-repeat;
+    /* background: url(background.png) no-repeat; */
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
 }
+.home-main{
+    display: flex;
+}
+.home-main::after{
+    flex-wrap: wrap;
+}
 
 .home-content{
     max-width: 600px;
+    width: 60%;
+    margin-top:25vh;
+
 }
 .home-content-1{
     max-width: 100%;
@@ -174,19 +340,29 @@ body{
 
 
 .about{
-    display: grid;
+    /* display: grid; */
+    /* margin-top:20% ; */
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 1.5rem;
 }
+.about-main{
+    display: flex;
+}
 
 .about-img img{
-    padding-bottom: 20%;
-    padding-top: 20%;
+     padding-bottom: 20%;
+   /* padding-top: 20%; */
     max-width: 750px;
     height: auto;
     width: 100%;
     border-radius: 8px;
+    margin-top: 20vh;
+}
+.about-text{
+    width: 50%;
+    margin-top: 20vh;
+
 }
 
 .about-text h2{
@@ -352,7 +528,7 @@ section{
     display: flex;
     align-items: center;
     gap: 3rem;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     margin-top: 130px; 
 }
 
@@ -434,18 +610,30 @@ section{
     height: 100%;
 }
 
-.contact{
-    display: grid;
+/* .contact{
+    display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 3rem;
     padding-left: 30px;
     margin-top: 130px;
+} */
+.contact-main{
+    display: contents;
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    /* padding-left: 10vh; */
+    
+    margin-top: 130px;
+}
+.contact-text{
+    width: 100%;
+    text-align: center;
 }
 .contact-text h2{
     font-size: 90px;
     line-height: 1;
-    text-align: center;
 
 }
 .contact-text h2 span{
@@ -508,6 +696,7 @@ section{
 
 .contact-form{
     position: relative;
+    width: 100%;
 }
 .contact-form form input, form textarea{
     border: none;
@@ -523,22 +712,29 @@ section{
 
 
 }
+.contact-form form .send{
+    text-align:center ;
+}
+
 
 .contact-form textarea{
     resize: none;
     height: 220px;
 }
-.contact-form .send{
+.contact-form button{
     display: inline-flex;
    padding: 14px 60px;
     letter-spacing: 1px;
     text-align: center;
     font-weight: 600;
+   
     background: #0ef;
     border-radius: 40px;
     font-size: 18px;
+    align-items: center;
     border: 2px solid #0ef;
     color: #081b29;
+    cursor: pointer;
     text-decoration: none;
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
@@ -560,20 +756,54 @@ section{
     color: #0ef;
 
 }
+.resume{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.resume-main{
+    width: 100%;
+    height: auto;
+    background-color: #14264D;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
 
 .container-2{
+   
     width: 70%;
     height: auto;
-    margin-top: 10vh;
+    /* margin-top: 20vh; */
     position: relative;
+   
+   
 }
 .container-2::after{
     position: absolute;
     content: '';
     width: 2px;
-    height: 100%;
+    height: 67%;
     background-image: linear-gradient(to bottom ,#0ef,rgb(0, 184, 240));
 
+}
+.resume-main h2{
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    margin: 10vh;
+    position: relative;
+}
+
+h2::after{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 3px;
+    left: 50%;
+    bottom: -5px;
+    
 }
 .container-2 ul{
     list-style: none;

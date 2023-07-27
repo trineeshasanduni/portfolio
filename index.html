@@ -14,48 +14,63 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#resume" style="--i:3">Resume</a>
-            <a href="#portfolio" style="--i:4">Portfolio</a>
-            <a href="#contact" style="--i:5">Contact</a>
-
+            <input id="nav-toggle" type="checkbox">
+            <ul class="links">
+                <li><a href="#home" style="--i:1" class="active">Home</a></li>
+                <li> <a href="#about" style="--i:2">About</a></li>
+                <li><a href="#resume" style="--i:3">Resume</a></li>
+                <li><a href="#portfolio" style="--i:4">Portfolio</a></li>
+                <li><a href="#contact" style="--i:5">Contact</a></li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
         </nav>
     </header>
     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Trineesha Thathsarani</h1>
-            <h3>And I'm a<span class="text"></span></h3>
-            <p>Computer Science Undergraduate</p>
-            <div class="home-sci">
-                <a href="https://www.linkedin.com/in/trineesha-thathsarani-5131b4213/" style="--i:6"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/trineeshasanduni" style="--i:7"><i class='bx bxl-github'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
+        <div class="home-main">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Trineesha Thathsarani</h1>
+                <h3>And I'm a<span class="text"></span></h3>
+                <p>Computer Science Undergraduate</p>
+                <div class="home-sci">
+                    <a href="https://www.linkedin.com/in/trineesha-thathsarani-5131b4213/" style="--i:6"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/trineeshasanduni" style="--i:7"><i class='bx bxl-github'></i></a>
+                    <a href="#" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                <a href="#about" class="btn-box">More About Me</a>
             </div>
-            <a href="#about" class="btn-box">More About Me</a>
+            <div class="about-img">
+                <img src="about.png" />
+            </div>
         </div>
     </section>
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="aboutme.png" />
+        <div class="about-main">
+            <div class="about-img">
+                <img src="aboutme.png" />
+            </div>
+            <div class="about-text">
+                <h2>Who<span> I am</span></h2>
+                <h4>Let me introduce myself</h4>
+                <p>I am a hardworking and organized undergraduate at
+                    the University of Colombo School of Computing
+                    seeking opportunities to enhance and maintain my
+                    designing skills. I am good at adapting faster to newer
+                    technologies and grasping them easily. I am
+                    passionate about creating web and mobile
+                    applications. I enjoy working with a team and believe in
+                    effective time management
+                </p>
+                <!-- <a href="#" class="btn-box">More About Me</a> -->
+            </div>
         </div>
-        <div class="about-text">
-            <h2>Who<span> I am</span></h2>
-            <h4>Let me introduce myself</h4>
-            <p>I am a hardworking and organized undergraduate at
-                the University of Colombo School of Computing
-                seeking opportunities to enhance and maintain my
-                designing skills. I am good at adapting faster to newer
-                technologies and grasping them easily. I am
-                passionate about creating web and mobile
-                applications. I enjoy working with a team and believe in
-                effective time management
-            </p>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-        <h1 class="sub-title">My<span>Skills</span></h1>
         <div class="home-content-1">
+            <h1 class="sub-title">My<span>Skills</span></h1>
             <div class="home-sci-1">
 
                 <a href="#" style="--i:3"><img src="c.png" /></i></a>
@@ -72,81 +87,46 @@
 
 
             </div>
-            <a href="#contact" style="margin-right: 2vh;" class="btn-box">Contact Me</a>
-            <a href="#" class="btn-box">Resume</a>
-
-        </div>
-        <!-- <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
-            <div class="radial-bars">
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">Creativity</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">80%</div>
-                    <div class="text">Communication</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">75%</div>
-                    <div class="text">Problem Solving</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">Teamwork</div>
-                </div>
+            <div class="btn">
+                <a href="#contact" style="margin-right: 2vh;" class="btn-box">Contact Me</a>
+                <a href="#" class="btn-box">Resume</a>
             </div>
-
-        </div> -->
-
-    </section >
-    <section class="resume" id="resume">
-        <h2>Resume</h2>
-        <div class="container-2">
-            <ul>
-                <li>
-                    <h3 class="title">Bachelor Degree</h3>
-                    <span class="circle"></span>
-                    <span class="date">July 2023 Present</span>
-                    <p>Bachelor of Science in Computer Science</p>
-                    <h4>Current GPA</h4>
-                   <h4>3.03</h4>
-                </li>
-                <li>
-                    <h3 class="title">School Education</h3>
-                    <span class="circle"></span>
-                    <span class="date">2011-2018</span>
-                    <p>Sirimavo Bandaranaike Vidyalaya</p>
-                    <h4>GCE Advanced Level</h4>
-                   <h4>A1 B2(Physical Science Stream) </h4>
-                </li>
-                <li>
-                    <h3 class="title">School Education</h3>
-                    <span class="circle"></span>
-                    <span class="date">2011-2018</span>
-                    <p>Sirimavo Bandaranaike Vidyalaya</p>
-                    <h4>GCE Ordinary Level</h4>
-                   <h4>A9</h4>
-                </li>
-                
-            </ul>
         </div>
+    </section>
+    <section class="resume" id="resume">
+        <div class="resume-main">
+            <div class="container-2">
+                <h2>Resume</h2>
+                <ul>
+                    <li>
+                        <h3 class="title">Bachelor Degree</h3>
+                        <span class="circle"></span>
+                        <span class="date">July 2023 Present</span>
+                        <p>Bachelor of Science in Computer Science</p>
+                        <h4>Current GPA</h4>
+                        <h4>3.03</h4>
+                    </li>
+                    <li>
+                        <h3 class="title">School Education</h3>
+                        <span class="circle"></span>
+                        <span class="date">2011-2018</span>
+                        <p>Sirimavo Bandaranaike Vidyalaya</p>
+                        <h4>GCE Advanced Level</h4>
+                        <h4>A1 B2(Physical Science Stream) </h4>
+                    </li>
+                    <li>
+                        <h3 class="title">School Education</h3>
+                        <span class="circle"></span>
+                        <span class="date">2011-2018</span>
+                        <p>Sirimavo Bandaranaike Vidyalaya</p>
+                        <h4>GCE Ordinary Level</h4>
+                        <h4>A9</h4>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
     </section>
     <section class="portfolio" id="portfolio">
         <div class="portfolio" id="project">
@@ -154,7 +134,7 @@
                 <h2>Latest <span>Project</span></h2>
                 <div class="portfolio-content">
                     <div class="row">
-                        <img src="hero.png"/>
+                        <img src="hero.png" />
                         <div class="layer">
                             <h5>UI/UX</h5>
                             <p>jewfhweriufhwekrgjqdnhejnjhewg</p>
@@ -162,7 +142,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <img src="hero.png"/>
+                        <img src="hero.png" />
                         <div class="layer">
                             <h5>UI/UX</h5>
                             <p>jewfhweriufhwekrgjqdnhejnjhewg</p>
@@ -170,7 +150,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <img src="hero.png"/>
+                        <img src="hero.png" />
                         <div class="layer">
                             <h5>UI/UX</h5>
                             <p>jewfhweriufhwekrgjqdnhejnjhewg</p>
@@ -178,7 +158,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <img src="hero.png"/>
+                        <img src="hero.png" />
                         <div class="layer">
                             <h5>UI/UX</h5>
                             <p>jewfhweriufhwekrgjqdnhejnjhewg</p>
@@ -191,38 +171,79 @@
         </div>
     </section>
     <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact<span>Me</span></h2>
-            <h4>Let's work Together</h4>
-            <p>ndhghefvnjlewhfvbnjdgqhwdbqwhgffbqnbyg jejfn</p>
-            <div class="contact-list">
-                <li><i class='bx bxs-send' ></i>trineeshasanduni@gmail.com</li>
-                <li><i class='bx bxs-phone' ></i>0704607067</li>
+        <div class="contact-main">
+            <div class="contact-text">
+                <h2>Contact<span>Me</span></h2>
+                <h4>Let's work Together</h4>
+                <p>ndhghefvnjlewhfvbnjdgqhwdbqwhgffbqnbyg jejfn</p>
+                <div class="contact-list">
+                    <li><i class='bx bxs-send'></i> trineeshasanduni@gmail.com</li>
+                    <li><i class='bx bxs-phone'></i> 0704607067</li>
+                </div>
+                <div class="contact-icons">
+                    <a href="#" style="--i:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" style="--i:2"><i class='bx bxl-github'></i></a>
+                    <a href="#" style="--i:3"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+
             </div>
-            <div class="contact-icons">
-                <a href="#" style="--i:1" ><i class='bx bxl-linkedin'></i></a>
-                <a href="#"  style="--i:2"><i class='bx bxl-github'></i></a>
-                <a href="#"  style="--i:3" ><i class='bx bxl-whatsapp'></i></a>
+            <div class="contact-form">
+                <form class="form" onsubmit="sendEmail();reset();return false;">
+                    <input class="name" type="text" placeholder="Trineesha Thathsarani" required>
+                    <input class="email" type="email" placeholder="trineeshasanduni@gmail.com" required>
+                    <textarea class="msg" name="text" id="" cols="40" rows="10" placeholder="Type Your Message...."
+                        required></textarea>
+                    <button type="submit">Send</button>
+
+
+                </form>
+
             </div>
-
         </div>
-        <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Trineesha Thathsarani" required>
-                <input type="email" placeholder="trineeshasanduni@gmail.com" required>
-                <textarea name="" id="" cols="40" rows="10" placeholder="Type Your Message...." required></textarea>
-                <input type="submit" value="submit" class="send"> 
-
-
-            </form>
-
-        </div>
-
     </section>
     <div class="last-text">
-        <p>Developed with <span>love</span> by <span>Trineesha Thathsarani </span>@ 2023</p>
+        <p>Developed with <span><i style="color: #0ef;" class='bx bxs-heart'></i></span> by <span>Trineesha </span>@
+            2023</p>
     </div>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script>
+        const Cform = document.querySelector('.form')
+
+        function sendMsg(e) {
+            e.preventDefault();
+            const name = document.querySelector('.name'),
+                email = document.querySelector('.email'),
+                msg = document.querySelector('.msg');
+
+            Email.send({
+                SecureToken: "c643b42f-00ba-4f2a-a581-63002978d5f8",
+                To: 'trineeshasanduni125@gmail.com',
+                From: email.value,
+                Subject: "form",
+                Body: msg.value
+            }).then(
+                message => alert(message)
+            );
+        }
+
+        Cform.addEventListener('submit', sendMsg);
+
+        // function sendEmail() {
+        //     Email.send({
+        //         Host: "smtp.gmail.com",
+        //         Username: "trineeshasanduni125@gmail.com",
+        //         Password: "996991768VG",
+        //         To: 'trineeshasanduni125@gmail.com',
+        //         From: document.getElementById("email").value,
+        //         Subject: "New Contact",
+        //         Body: "And this is the body"
+        //     }).then(
+        //         message => alert(message)
+        //     );
+
+        // }
+    </script>
 
 </body>
 
